@@ -1,0 +1,23 @@
+color:
+  palette:
+    jaune-fonce: "#dee114" 
+    bleu: "#354888"
+  primary: jaune-fonce
+  foreground: bleu
+  
+typography:
+  fonts:
+    - family: Inter
+      source: google
+      weight: [400, 600, 700]
+  base: Inter
+  headings: 
+    color: primary
+
+logo:
+  images:
+    mstats: 
+      path: "img/logo_quarto.png"
+      
+      
+      

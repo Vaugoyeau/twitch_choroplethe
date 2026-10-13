@@ -1,0 +1,15 @@
+project:
+  title: "twitch_typst"
+
+editor: visual
+
+author: "[Marie VAUGOYEAU](mailto:contact@marievaugoyeau.fr)"
+
+format:
+  typst: 
+    logo: 
+      path: mstats
+      location: left-top
+      padding-top: 0.25in
+      padding-left: 0.5in
+
