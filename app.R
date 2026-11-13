@@ -10,7 +10,7 @@ library(plotly)
 ## données depuis le site ODRE : https://opendata.reseaux-energies.fr/
 donnees_odre <- read_delim(
   "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/registre-national-installation-production-stockage-electricite-agrege/exports/csv?lang=fr&refine=regime%3A%22En%20service%22&facet=facet(name%3D%22regime%22%2C%20disjunctive%3Dtrue)&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B",
-  col_select = c(region, filiere, tensionRaccordement, maxPuis)
+  col_select = c(region, filiere, tensionRaccordement, puisMaxInstallee)
 ) |> 
   drop_na(region) |> 
   group_by(
@@ -19,7 +19,7 @@ donnees_odre <- read_delim(
     tensionRaccordement
   ) |> 
   summarise(
-    puissance_max_cumulee = sum(maxPuis)/1000
+    puissance_max_cumulee = sum(puisMaxInstallee)/1000
   ) |> 
   ungroup()
 
